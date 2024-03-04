@@ -1,2 +1,2 @@
 # f8-the-band
-Study and practice to create a website
+This is my small project practice to create a web
