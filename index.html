@@ -89,7 +89,7 @@
                     <!-- Place-item -->
                     <div class="place-list">
                         <div class="place-item">
-                            <img src="./assets/img/band/city/newyork.jpg" alt="newyorkcity" class="place-img">
+                            <img src="./assets/img/band/city/newyork.jpg" alt="newyorkcity" class="place-img js-place-img">
                             <div class="place-body">
                                 <h3 class="place-header">New York</h3>
                                 <p class="place-date">Fri 27 Nov 2024</p>
@@ -98,7 +98,7 @@
                             </div>
                         </div>
                         <div class="place-item">
-                            <img src="./assets/img/band/city/paris.jpg" alt="pariscity" class="place-img">
+                            <img src="./assets/img/band/city/paris.jpg" alt="pariscity" class="place-img js-place-img">
                             <div class="place-body">
                                 <h3 class="place-header">Paris</h3>
                                 <p class="place-date">Sat 28 Nov 2024</p>
@@ -107,7 +107,7 @@
                             </div>
                         </div>
                         <div class="place-item">
-                            <img src="./assets/img/band/city/sanfran.jpg" alt="San Francisco" class="place-img">
+                            <img src="./assets/img/band/city/sanfran.jpg" alt="San Francisco" class="place-img js-place-img">
                             <div class="place-body">
                                 <h3 class="place-header">San Francisco</h3>
                                 <p class="place-date">Sun 29 Nov 2024</p>
@@ -171,6 +171,7 @@
         const modal = document.querySelector('.modal')
         const closeBtn = document.querySelector('.js-close')
         const modalContainer = document.querySelector('.js-modal-container')
+        const placeClicks = document.querySelectorAll('.js-place-img')
 
         function closeBuyTickets(){
           modal.classList.remove('open')
@@ -194,6 +195,10 @@
         modalContainer.addEventListener('click', function(event){
             event.stopPropagation();
         })
+        
+        for (const placeClick of placeClicks){
+           placeClick.addEventListener('click', showBuyTickets);
+        }
     </script>
 </body>
 
