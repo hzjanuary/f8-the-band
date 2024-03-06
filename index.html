@@ -133,8 +133,8 @@
     </div>
 
     <div class="modal">
-        <div class="modal-container">
-            <div class="modal-close">
+        <div class="modal-container js-modal-container">
+            <div class="modal-close js-close">
                 <i class="ti-close"></i>
             </div>
             <header class="modal-header">
@@ -167,17 +167,33 @@
     </div>
 
     <script>
-        const buyBtns = document.querySelectorAll('.js-buy-ticket');
-        const modal = document.querySelector('.modal');
+        const buyBtns = document.querySelectorAll('.js-buy-ticket')
+        const modal = document.querySelector('.modal')
+        const closeBtn = document.querySelector('.js-close')
+        const modalContainer = document.querySelector('.js-modal-container')
+
+        function closeBuyTickets(){
+          modal.classList.remove('open')
+        }
 
         function showBuyTickets() {
-            alert("show");
+          modal.classList.add('open')
         }
-
+        
+        closeBtn.addEventListener('click', closeBuyTickets);
+        
+        //lap qua tung the va nghe hanh vi la  click
         for (const buyBtn of buyBtns) {
             buyBtn.addEventListener('click', showBuyTickets);
-
         }
+        
+        //bam ra ngoai container -> close
+        modal.addEventListener('click', closeBuyTickets);
+        
+        //ngan hanh vi click va container bi close
+        modalContainer.addEventListener('click', function(event){
+            event.stopPropagation();
+        })
     </script>
 </body>
 

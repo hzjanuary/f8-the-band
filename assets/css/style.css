@@ -242,9 +242,7 @@ hoặc dùng width : 100; */
 }
 
 .place-list{
-    margin-top : 24px;
-    margin-right : -8px;
-    margin-left : -8px;
+   margin : 32px -8px 48px;
 }
 
 .place-item {
@@ -318,10 +316,10 @@ hoặc dùng width : 100; */
     background: rgba(0, 0, 0, 0.6);
     align-items: center;
     justify-content: center;
-    display: none;
+    display : none;
 }
 
-.modal open {
+.modal.open {
     display : flex;
 }
 
@@ -331,7 +329,7 @@ hoặc dùng width : 100; */
     max-width: calc(100% - 16px);
     min-height: 200px;
     position : relative;
-
+    animation : modalFadeIn ease .5s;
 }
 
 .modal-header {
@@ -407,4 +405,15 @@ hoặc dùng width : 100; */
 
 #footer {
     background-color: black;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity : 0;
+    transform : translateY(-140px);
+  }
+  to {
+    opacity: 1;
+    transform : translateY(0);
+  }
 }
