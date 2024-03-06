@@ -12,6 +12,29 @@ html {
     clear: both;
 }
 
+.row {
+  margin-right : -8px;
+  margin-left : -8px;
+}
+
+.col {
+  float : left;
+  padding-right : 8px;
+  padding-left : 8px;
+}
+
+.col-half {
+  width : 50%;
+}
+
+.col-third {
+  width : 33.33333%;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
 #main {
 
 }
@@ -177,11 +200,6 @@ hoặc dùng width : 100; */
     margin-top : 48px;
 }
 
-#content .member-item{
-    float : left;
-    width : calc(100%/3);
-    text-align: center;
-}
 
 #content .member-name {
     padding-bottom : 15px;
@@ -242,14 +260,8 @@ hoặc dùng width : 100; */
 }
 
 .place-list{
-   margin : 32px -8px 48px;
-}
-
-.place-item {
-    float : left;
-    width : 33.33333%;
-    padding : 0 12px 8px;
-    
+   margin-top : 32px;
+   margin-bottom : 48px;
 }
 
 /* cho hình ảnh nằm gọn trong thẻ cha */
