@@ -23,6 +23,10 @@ html {
   padding-left : 8px;
 }
 
+.col-full {
+  width : 100%;
+}
+
 .col-half {
   width : 50%;
 }
@@ -413,6 +417,21 @@ hoặc dùng width : 100; */
 
 .modal-help a {
     color : violet;
+}
+
+/*Contact*/
+
+.contact-content {
+  margin-top : 48px;
+}
+
+.contact-info {
+  font-size: 18px;
+}
+
+.contact-info i [class*="ti-"]{
+  width : 30px;
+  display : inline-block;
 }
 
 #footer {
