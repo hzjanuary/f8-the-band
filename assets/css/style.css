@@ -8,6 +8,32 @@ html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.white-text {
+    color : white;
+}
+
+.pull-right {
+    float : right
+}
+
+.btn {
+    margin-bottom : 10px;
+    background-color : rgb(85, 12, 83, 0.7);
+    padding : 12px 16px;
+    text-decoration: none;
+    color : white;
+    box-sizing: inherit;
+    border : none;
+    font-size : 15px;
+    border : none;
+}
+
+.btn:hover {
+    background-color: #ccc;
+    color : black;
+    cursor: pointer;
+}
+
 .clear {
     clear: both;
 }
@@ -27,7 +53,7 @@ html {
 
 .row::after {
     content : "";
-    /* display: block; */
+    /* display: inline-block; */
     clear : both;
 }
 
@@ -54,7 +80,7 @@ html {
 }
 
 #main {
-
+    height : 100%
 }
 
 #header{
@@ -184,10 +210,10 @@ hoặc dùng width : 100; */
 
 #content .content-section {
     width : 800px;
+    padding : 60px 0 112px;
     margin-left : auto;
     margin-right : auto;
-    padding : 60px 0;
-    height: 100%;
+    height: auto;
 }
 
 #content .section-heading{
@@ -234,7 +260,7 @@ hoặc dùng width : 100; */
 
 .tour-section {
     background-color: #000;
-    height: 800px;
+    height: 850px;
 }
 
 .tour-section .ticket-list {
@@ -264,10 +290,10 @@ hoặc dùng width : 100; */
 }
 
 .ticket-list .quantity {
-    /* float : right; */
+    float : right;
     background-color: #000;
     color: #fff;
-    display: inline-block;
+    display: block;
     padding-left: 8px;
     padding-right: 8px;
     padding-top : 4px;
@@ -319,23 +345,6 @@ hoặc dùng width : 100; */
     font-size : 16px;
     padding : 12px 0px;
     margin-bottom: 16px;
-}
-
-.buy-ticket-btn {
-    margin-bottom : 10px;
-    background-color : black;
-    padding : 12px 16px;
-    text-decoration: none;
-    color : white;
-    box-sizing: inherit;
-    border : none;
-    font-size : 15px;
-}
-
-.buy-ticket-btn:hover {
-    background-color: #ccc;
-    color : black;
-    cursor: pointer;
 }
 
 .modal {
@@ -460,23 +469,8 @@ hoặc dùng width : 100; */
     width : 100%;
 }
 
-.form-submit-btn {
-    padding: 8px 13px;
-    background-color: black;
-    color: white;
-    float: right;
-    border: 1px solid black;
-}
-
-.form-submit-btn:hover{
-    cursor: pointer;
-    background-color: #757575;
-    column-rule: black;
-    border: 1px solid #757575;
-}
-
 #footer {
-    height: 600px;
+
 }
 
 @keyframes modalFadeIn {
