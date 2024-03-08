@@ -461,11 +461,16 @@ hoặc dùng width : 100; */
 
 .contact-form {
     font-size: 15px;
+    margin-bottom : 50px;
 }
 
 .contact-form .form-control {
     padding : 10px;
     border : 1px solid #ccc;
+    width : 100%;
+}
+
+.map-section img {
     width : 100%;
 }
 
