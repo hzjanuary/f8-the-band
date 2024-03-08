@@ -12,9 +12,23 @@ html {
     clear: both;
 }
 
+.mt-8 {
+    margin-top: 8px !important;
+}
+
+.mt-16 {
+    margin-top: 16px !important;
+}
+
 .row {
   margin-right : -8px;
   margin-left : -8px;
+}
+
+.row::after {
+    content : "";
+    /* display: block; */
+    clear : both;
 }
 
 .col {
@@ -163,8 +177,8 @@ hoặc dùng width : 100; */
 
 #content {
     height: 100%;
-    background-color: #333;
-    color : white;
+    /* background-color: #333; */
+    color : black;
 
 }
 
@@ -173,6 +187,7 @@ hoặc dùng width : 100; */
     margin-left : auto;
     margin-right : auto;
     padding : 60px 0;
+    height: 100%;
 }
 
 #content .section-heading{
@@ -435,13 +450,33 @@ hoặc dùng width : 100; */
   display : inline-block;
 }
 
+.contact-form {
+    font-size: 15px;
+}
+
 .contact-form .form-control {
-  padding :4px 4px;
+    padding : 10px;
+    border : 1px solid #ccc;
+    width : 100%;
+}
+
+.form-submit-btn {
+    padding: 8px 13px;
+    background-color: black;
+    color: white;
+    float: right;
+    border: 1px solid black;
+}
+
+.form-submit-btn:hover{
+    cursor: pointer;
+    background-color: #757575;
+    column-rule: black;
+    border: 1px solid #757575;
 }
 
 #footer {
-    background-color: #333;
-    height : 800px;
+    height: 600px;
 }
 
 @keyframes modalFadeIn {

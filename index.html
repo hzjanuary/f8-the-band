@@ -89,7 +89,8 @@
                     <!-- Place-item -->
                     <div class="row place-list">
                         <div class=" col col-third">
-                            <img src="./assets/img/band/city/newyork.jpg" alt="newyorkcity" class="place-img js-place-img">
+                            <img src="./assets/img/band/city/newyork.jpg" alt="newyorkcity"
+                                class="place-img js-place-img">
                             <div class="place-body">
                                 <h3 class="place-header">New York</h3>
                                 <p class="place-date">Fri 27 Nov 2024</p>
@@ -107,7 +108,8 @@
                             </div>
                         </div>
                         <div class="col col-third">
-                            <img src="./assets/img/band/city/sanfran.jpg" alt="San Francisco" class="place-img js-place-img">
+                            <img src="./assets/img/band/city/sanfran.jpg" alt="San Francisco"
+                                class="place-img js-place-img">
                             <div class="place-body">
                                 <h3 class="place-header">San Francisco</h3>
                                 <p class="place-date">Sun 29 Nov 2024</p>
@@ -120,41 +122,41 @@
                 </div>
             </div>
             <!-- Contact section  -->
-            <div class="content-section">
+            <div class="content-section form-contact">
                 <h2 class="section-heading">Contact</h2>
                 <p class="section-sub-heading">Fan? Drop a note!</p>
-               <div class="row contact-content">
-                  <div class="col col-half contact-info">
-                    <p><i class=ti-location-pin> Chicago, US</i></p>
-                    <p><i class=ti-mobile> Phone: +00 151515</i></p>
-                    <p><i class=ti-email> Email: mail@mail.com</i></p>
-                  </div>
+                <div class="row contact-content">
+                    <div class="col col-half contact-info">
+                        <p><i class=ti-location-pin> Chicago, US</i></p>
+                        <p><i class=ti-mobile> Phone: +00 151515</i></p>
+                        <p><i class=ti-email> Email: mail@mail.com</i></p>
+                    </div>
                 </div>
                 <div class="col col-half contact-form">
                     <form action="">
-                      <div class ="row">
-                        <div class="col col-half">
-                            <input type="text" name="" placeholder="Name" id="" class="form-control" />
+                        <div class="row">
+                            <div class="col col-half">
+                                <input type="text" name="" placeholder="Name" id="" class="form-control" />
+                            </div>
+                            <div class="col col-half">
+                                <input type="email" name="" placeholder="Email" id="" class="form-control" />
+                            </div>
                         </div>
-                          <div class="col col-half">
-                            <input type="email" name="" placeholder="Email" id="" class="form-control" />
-                          </div>
-                       </div>
-                       
-                       <div class="row">
-                        <div class="col col-full">
-                          <input type="text" name="" placeholder="Message" id="" class="form-control" />
+
+                        <div class="row">
+                            <div class="col col-full mt-8">
+                                <input type="text" name="" placeholder="Message" id="" class="form-control" />
+                            </div>
                         </div>
-                      </div>
-                          <input type="submit" value="Send" />
+                        <input type="submit" value="SEND" class="form-submit-btn mt-16" />
                     </form>
-                 </div>
-               </div>
+                </div>
             </div>
         </div>
-       <div id="footer">
+    </div>
+    <div id="footer">
 
-        </div>
+    </div>
 
     </div>
 
@@ -199,31 +201,31 @@
         const modalContainer = document.querySelector('.js-modal-container')
         const placeClicks = document.querySelectorAll('.js-place-img')
 
-        function closeBuyTickets(){
-          modal.classList.remove('open')
+        function closeBuyTickets() {
+            modal.classList.remove('open')
         }
 
         function showBuyTickets() {
-          modal.classList.add('open')
+            modal.classList.add('open')
         }
-        
+
         closeBtn.addEventListener('click', closeBuyTickets);
-        
-        //lap qua tung the va nghe hanh vi la  click
+
+        //Lặp qua từng thẻ và lắng nghe hành vi click
         for (const buyBtn of buyBtns) {
             buyBtn.addEventListener('click', showBuyTickets);
         }
-        
-        //bam ra ngoai container -> close
+
+        //Tạo hành vi bấm ra ngoài cái popup sẽ close
         modal.addEventListener('click', closeBuyTickets);
-        
-        //ngan hanh vi click va container bi close
-        modalContainer.addEventListener('click', function(event){
+
+        //ngăn hành vi bấm vào popup bị close
+        modalContainer.addEventListener('click', function (event) {
             event.stopPropagation();
         })
-        
-        for (const placeClick of placeClicks){
-           placeClick.addEventListener('click', showBuyTickets);
+
+        for (const placeClick of placeClicks) {
+            placeClick.addEventListener('click', showBuyTickets);
         }
     </script>
 </body>
