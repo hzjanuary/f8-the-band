@@ -97,6 +97,7 @@ html {
     right : 0;
     top : 0;
     z-index: 1;
+    overflow : hidden;
 }
 
 #nav{
@@ -160,7 +161,8 @@ html {
 }
 
 /* cho box search được hiện lên trên thanh navigation */
-#header .search-btn{
+#header .search-btn,
+#header .mobile-menu-btn{
     float : right;
 }
 
@@ -170,7 +172,16 @@ html {
     cursor: pointer;
 }
 
+#header .mobile-menu-btn{
+    background-color :rgb(85, 12, 83);
+}
+
+#header .mobile-menu-btn:hover{
+    background-color : blueviolet;
+}
+
 /* line-height căn giữa cho search button */
+#header .menu-icon,
 #header .search-icon {
     font-size: 20px;
     color : white;

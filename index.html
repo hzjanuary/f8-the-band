@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Band</title>
     <link href="./assets/css/style.css" rel="stylesheet">
+    <link href="./assets/css/responsive.css" rel="stylesheet">
     <link href="./assets/fonts/themify-icons/themify-icons.css" rel="stylesheet">
 </head>
 
@@ -33,9 +34,13 @@
             <!-- End: Nav -->
 
             <!-- Begin: Search button-->
-            <id class="search-btn">
+            <div class="search-btn">
                 <i class="search-icon ti-search"></i>
-            </id>
+            </div>
+
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <i class="menu-icon ti-menu"></i>
+            </div>
             <!-- End: Search button-->
         </div>
         <div id="slider">
@@ -206,11 +211,16 @@
     </div>
 
     <script>
-        const buyBtns = document.querySelectorAll('.js-buy-ticket')
-        const modal = document.querySelector('.modal')
-        const closeBtn = document.querySelector('.js-close')
-        const modalContainer = document.querySelector('.js-modal-container')
-        const placeClicks = document.querySelectorAll('.js-place-img')
+        const buyBtns = document.querySelectorAll('.js-buy-ticket');
+        const modal = document.querySelector('.modal');
+        const closeBtn = document.querySelector('.js-close');
+        const modalContainer = document.querySelector('.js-modal-container');
+        const placeClicks = document.querySelectorAll('.js-place-img');
+
+        //Nút menu trên mobile
+        var header = document.getElementById('header');
+        var mobileMenu = document.getElementById('mobile-menu')
+        var headerHeight = header.clientHeight
 
         function closeBuyTickets() {
             modal.classList.remove('open')
@@ -237,6 +247,16 @@
 
         for (const placeClick of placeClicks) {
             placeClick.addEventListener('click', showBuyTickets);
+        }
+
+        // hành vi onclick mở ra list menu trên mobile 
+        mobileMenu.onclick = function () { //tạo hành vi
+            var isClosed = header.clientHeight === headerHeight; //tạo biến isClosed và so sánh giá trị với biến headerHeight vừa tạo
+            if (isClosed) {
+                header.style.height = 'auto'; // nếu bằng thì set chiều cao thành auto và hiện ra list menu
+            } else {
+                header.style.height = null; // nếu khác thì trả giá trị = null (trả lại giá trị trước đó)
+            }
         }
     </script>
 </body>
