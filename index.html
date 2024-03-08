@@ -20,7 +20,7 @@
                 <li><a href="#tour">Tour</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li>
-                    <a>
+                    <a href="#">
                         More
                         <i class="nav-arrow-down ti-angle-down"></i>
                     </a>
@@ -211,16 +211,12 @@
     </div>
 
     <script>
+        // popup cửa sổ đặt tickets
         const buyBtns = document.querySelectorAll('.js-buy-ticket');
         const modal = document.querySelector('.modal');
         const closeBtn = document.querySelector('.js-close');
         const modalContainer = document.querySelector('.js-modal-container');
         const placeClicks = document.querySelectorAll('.js-place-img');
-
-        //Nút menu trên mobile
-        var header = document.getElementById('header');
-        var mobileMenu = document.getElementById('mobile-menu')
-        var headerHeight = header.clientHeight
 
         function closeBuyTickets() {
             modal.classList.remove('open')
@@ -232,15 +228,15 @@
 
         closeBtn.addEventListener('click', closeBuyTickets);
 
-        //Lặp qua từng thẻ và lắng nghe hành vi click
+        // Lặp qua từng thẻ và lắng nghe hành vi click
         for (const buyBtn of buyBtns) {
             buyBtn.addEventListener('click', showBuyTickets);
         }
 
-        //Tạo hành vi bấm ra ngoài cái popup sẽ close
+        // Tạo hành vi bấm ra ngoài cái popup sẽ close
         modal.addEventListener('click', closeBuyTickets);
 
-        //ngăn hành vi bấm vào popup bị close
+        // ngăn hành vi bấm vào popup bị close
         modalContainer.addEventListener('click', function (event) {
             event.stopPropagation();
         })
@@ -249,6 +245,11 @@
             placeClick.addEventListener('click', showBuyTickets);
         }
 
+        // Nút menu trên mobile
+        var header = document.getElementById('header');
+        var mobileMenu = document.getElementById('mobile-menu')
+        var headerHeight = header.clientHeight
+
         // hành vi onclick mở ra list menu trên mobile 
         mobileMenu.onclick = function () { //tạo hành vi
             var isClosed = header.clientHeight === headerHeight; //tạo biến isClosed và so sánh giá trị với biến headerHeight vừa tạo
@@ -256,6 +257,16 @@
                 header.style.height = 'auto'; // nếu bằng thì set chiều cao thành auto và hiện ra list menu
             } else {
                 header.style.height = null; // nếu khác thì trả giá trị = null (trả lại giá trị trước đó)
+            }
+        }
+
+        // tự đóng cửa sổ khi chọn vào mục trong menu
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]')
+        for (var i = 0; i < menuItems.length; i++) {
+            var menuItem = menuItems[i];
+
+            menuItem.onclick = function () {
+                header.style.height = null;
             }
         }
     </script>
