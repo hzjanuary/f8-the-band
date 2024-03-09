@@ -1,6 +1,11 @@
 @media (max-width : 740px) {
-    .s-col-full {
+    .s-col-full,
+    .s-full-width {
         width : 100%
+    }
+
+    .s-mt-8 {
+        margin-top : 8px !important;
     }
 
     #header {
@@ -37,12 +42,11 @@
         display : inline-block;
     }
 
-    #content .member-item {
-        margin-top : 30px;
-        width : 100%;
-    }
-
     #content .member-avt {
         width : 60%;
+    }
+
+    .contact-form{
+        margin-top : 16px;
     }
 }
