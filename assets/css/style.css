@@ -287,7 +287,6 @@ hoặc dùng width : 100; */
 
 .tour-section {
     background-color: #000;
-    height: 850px;
 }
 
 .tour-section .ticket-list {
@@ -332,7 +331,7 @@ hoặc dùng width : 100; */
 }
 
 .place-list{
-   margin-top : 32px;
+   margin-top : 16px;
    margin-bottom : 48px;
 }
 

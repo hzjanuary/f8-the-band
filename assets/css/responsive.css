@@ -1,4 +1,8 @@
 @media (max-width : 740px) {
+    .s-col-full {
+        width : 100%
+    }
+
     #header {
         overflow : hidden;
     }
@@ -36,5 +40,9 @@
     #content .member-item {
         margin-top : 30px;
         width : 100%;
+    }
+
+    #content .member-avt {
+        width : 60%;
     }
 }
