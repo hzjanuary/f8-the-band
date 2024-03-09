@@ -160,6 +160,13 @@ html {
     font-size: 14px;
 }
 
+#header .mobile-menu-btn {
+    position : absolute;
+    top : 0;
+    right : 0;
+    display : none;
+}
+
 /* cho box search được hiện lên trên thanh navigation */
 #header .search-btn,
 #header .mobile-menu-btn{
@@ -172,9 +179,9 @@ html {
     cursor: pointer;
 }
 
-#header .mobile-menu-btn{
+/* #header .mobile-menu-btn{
     background-color :rgb(85, 12, 83);
-}
+} */
 
 #header .mobile-menu-btn:hover{
     background-color : blueviolet;
