@@ -37,7 +37,7 @@
             <div class="search-btn">
                 <i class="search-icon ti-search"></i>
             </div>
-                <!-- Mobile Menu button -->
+            <!-- Mobile Menu button -->
             <div id="mobile-menu" class="mobile-menu-btn">
                 <i class="menu-icon ti-menu"></i>
             </div>
@@ -263,9 +263,12 @@
         var menuItems = document.querySelectorAll('#nav li a[href*="#"]')
         for (var i = 0; i < menuItems.length; i++) {
             var menuItem = menuItems[i];
-
+            
             menuItem.onclick = function () {
-                header.style.height = null;
+                var isParentMenu = this.nextElementSibling && menuItem.nextElementSibling.classList.contains('subnav');
+                if(!isParentMenu){
+                    header.style.height = null;
+                }
             }
         }
     </script>
