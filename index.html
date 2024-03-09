@@ -63,15 +63,15 @@
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
                     commodo consequat.</p>
                 <div class="row member-list">
-                    <div class="col col-third text-center">
+                    <div class="member-item col col-third text-center">
                         <p class="member-name">Name</p>
                         <img src="./assets/img/band/member/bandmember.jpg" alt="name" class="member-avt">
                     </div>
-                    <div class="col col-third text-center">
+                    <div class="member-item col col-third text-center">
                         <p class="member-name">Name</p>
                         <img src="./assets/img/band/member/bandmember.jpg" alt="name" class="member-avt">
                     </div>
-                    <div class="col col-third text-center">
+                    <div class="member-item col col-third text-center">
                         <p class="member-name">Name</p>
                         <img src="./assets/img/band/member/bandmember.jpg" alt="name" class="member-avt">
                     </div>
@@ -263,10 +263,12 @@
         var menuItems = document.querySelectorAll('#nav li a[href*="#"]')
         for (var i = 0; i < menuItems.length; i++) {
             var menuItem = menuItems[i];
-            
-            menuItem.onclick = function () {
-                var isParentMenu = this.nextElementSibling && menuItem.nextElementSibling.classList.contains('subnav');
-                if(!isParentMenu){
+
+            menuItem.onclick = function (event) {
+                var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+                if (isParentMenu) {
+                    event.preventDefault();
+                } else {
                     header.style.height = null;
                 }
             }

@@ -1,13 +1,6 @@
 @media (max-width : 740px) {
-    #nav {
-        display : block
-    }
-    #nav > li {
-        display : block;
-    }
-
-    #nav > li:first-child{
-        display : inline-block;
+    #header {
+        overflow : hidden;
     }
 
     #header .mobile-menu-btn {
@@ -18,4 +11,30 @@
         display : none;
     }
 
+    #nav {
+        display : block
+    }
+
+    #nav .subnav {
+        position : initial;
+        background-color : rgba(123, 17, 119, 0.9);
+    }
+
+    #nav .subnav li a {
+        color : white;
+        padding : 5px 31px;
+    }
+
+    #nav > li {
+        display : block;
+    }
+
+    #nav > li:first-child{
+        display : inline-block;
+    }
+
+    #content .member-item {
+        margin-top : 30px;
+        width : 100%;
+    }
 }

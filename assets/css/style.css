@@ -97,7 +97,6 @@ html {
     right : 0;
     top : 0;
     z-index: 1;
-    overflow : hidden;
 }
 
 #nav{
@@ -132,7 +131,7 @@ html {
 #nav > li:hover > a,
 #nav .subnav li:hover a{
     color : black;
-    background-color: #ccc;
+    background-color: mintcream;
     display: block;
 }
 
@@ -144,15 +143,16 @@ html {
     position: absolute;
     background-color: white;
     box-shadow: 0 0 10px #ccc;
+    list-style-type: none;
 }
 
-/* bỏ dấu chấm đầu dòng cho mục subnav */
-#nav, .subnav { 
-    list-style-type: none;
-} 
+#nav .subnav a {
+    padding : 0 12px;
+    color : black;
+    line-height: 38px;
+}
 
 #nav .subnav li a {
-    color : black;
     padding : 0 12px;
 }
 
