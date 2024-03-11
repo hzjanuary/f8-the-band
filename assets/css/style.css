@@ -33,6 +33,7 @@ html {
     font-size : 15px;
     border : none;
     text-align: center;
+    -webkit-appearance: none;
 }
 
 .btn:hover {
@@ -492,7 +493,7 @@ hoặc dùng width : 100; */
 }
 
 .contact-info a:hover{
-    color : purple;
+    opacity : 1;
 }
 
 .contact-info i [class*="ti-"]{
